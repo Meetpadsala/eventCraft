@@ -24,7 +24,7 @@ const PORT = process.env.PORT;
 const MONGO_CONNECT_URL = process.env.MONGO_URI;
 
 const defaultAllowedOrigins = [
-    "http://localhost:5173",
+    "http://192.168.29.13:5173",
     "https://eventcraft-1-nffh.onrender.com",
 ];
 
