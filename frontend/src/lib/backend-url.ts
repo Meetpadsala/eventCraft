@@ -1,4 +1,4 @@
-const DEFAULT_BACKEND_API_URL = "https://eventcraft-zv3d.onrender.com/api";
+const DEFAULT_BACKEND_API_URL = "http://192.168.29.13/api";
 
 const ensureApiSuffix = (url: string) => {
   const trimmed = url.trim().replace(/\/$/, "");
