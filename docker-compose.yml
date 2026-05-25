@@ -1,0 +1,37 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+
+    volumes:
+      - mongo-db:/data/db
+
+  frontend:
+    image: eventcraft-frontend
+    container_name: frontend
+    ports:
+      - "5173:80"
+
+    depends_on:
+      - backend
+
+    env_file:
+      - .env
+
+  backend:
+    image: eventcraft-backend
+    container_name: backend
+    ports:
+      - "4041:4041"
+
+    depends_on:
+      - mongodb
+
+    env_file:
+      - .env
+
+volumes:
+  mongo-db:
+      
